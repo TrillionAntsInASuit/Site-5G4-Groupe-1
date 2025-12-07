@@ -1,6 +1,7 @@
 +++
-title = "Notes de cours"
+title = "Notes de cours : Voice-to-Text"
 weight = 2
 +++
 
-Notes de cours sur votre sujet.
+## Introduction
+(... ton texte complet ...)
