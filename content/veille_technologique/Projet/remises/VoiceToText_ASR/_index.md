@@ -21,6 +21,9 @@ Ce dossier contient la veille technologique, les notes de cours et l’atelier p
 - [Veille technologique](./veille_techno/)  
   Premier prompt LLM, discussion critique, sources choisies, article récent et ressources sociales.
 
+- [Corrigé](./corrige/) 
+  Corrigé de l'atelier
+
 ---
 
 ## Objectifs pédagogiques

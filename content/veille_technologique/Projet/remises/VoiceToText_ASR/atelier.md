@@ -4,15 +4,6 @@ weight = 3
 +++
 
 ---
-title: "Laboratoire: ASR (Reconnaissance Vocale) avec Whisper"
-date: 2025-01-15
-draft: false
-description: "Reconnaissance vocale Voice-to-Text dans un environnement Linux Docker"
-tags: ["ASR", "Whisper", "Docker", "Python", "Machine Learning", "Voice Recognition"]
-categories: ["Laboratoire"]
-author: "Votre Nom"
-weight: 1
----
 
 ## 📋 Objectifs du laboratoire
 
@@ -43,11 +34,11 @@ weight: 1
 
 ### Étape 1.1: Préparer l'environnement
 
-Créez un dossier pour le laboratoire:
+Créez un dossier pour le laboratoire dans le repertoire:
 
 ```bash
-mkdir ~/lab-asr
-cd ~/lab-asr
+mkdir lab-asr
+cd lab-asr
 mkdir audio_samples
 mkdir transcriptions
 ```
@@ -125,7 +116,7 @@ Dans le conteneur, téléchargez quelques exemples:
 
 ```bash
 # Exemple en anglais
-wget -O /workspace/audio_samples/sample_en.mp3 \
+wget -O /audio_samples/Enregistrement.m4a \
   "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav"
 
 # Vous pouvez aussi copier vos propres fichiers audio
@@ -370,21 +361,21 @@ if __name__ == "__main__":
     language = sys.argv[3] if len(sys.argv) > 3 else None
     
     if not os.path.exists(audio_file):
-        print(f"❌ Erreur: Le fichier '{audio_file}' n'existe pas")
+        print(f" Erreur: Le fichier '{audio_file}' n'existe pas")
         sys.exit(1)
     
     # Transcription
     result = transcribe_with_timestamps(audio_file, model_name, language)
     
     # Affichage
-    print(f"\n🌍 Langue détectée: {result['language']}")
+    print(f"\n Langue détectée: {result['language']}")
     display_segments(result["segments"])
     
     # Sauvegarde
-    print("\n💾 Sauvegarde des résultats...")
+    print("\n Sauvegarde des résultats...")
     save_transcription(result, audio_file)
     
-    print("\n✨ Transcription terminée avec succès!")
+    print("\n Transcription terminée avec succès!")
 ```
 
 **Testez le script avancé**:
@@ -533,37 +524,6 @@ if __name__ == "__main__":
 
 ---
 
-## Projet final (Optionnel)
-
-**Durée**: 30 minutes
-
-### Créer une interface simple en ligne de commande
-
-Créez `asr_cli.py` qui offre un menu interactif:
-
-```
-=================================
-    ASR - Menu Principal
-=================================
-1. Transcrire un fichier
-2. Transcrire un dossier (batch)
-3. Comparer les modèles
-4. Voir les transcriptions sauvegardées
-5. Quitter
-
-Votre choix:
-```
-
-**Fonctionnalités attendues**:
-- Navigation par menu
-- Validation des entrées utilisateur
-- Messages d'erreur clairs
-- Affichage des résultats formaté
-
----
-
-## Rapport de laboratoire
-
 À la fin du laboratoire, créez un fichier `RAPPORT.md` contenant:
 
 1. **Résumé des apprentissages** (5-10 lignes)
@@ -608,3 +568,8 @@ Votre choix:
 
 
 *N'hésitez pas à expérimenter et à poser des questions si vous rencontrez des difficultés.*
+
+
+## Corrigé
+
+- [Corrigé](./corrige/) 
